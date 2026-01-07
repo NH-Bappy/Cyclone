@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+
+:root {
+
+  /* Gray */
+  --color-gray-00: #FFFFFF;
+  --color-gray-50: #F2F4F5;
+  --color-gray-100: #E4E7E9;
+  --color-gray-200: #C9CFD2;
+  --color-gray-300: #ADB7BC;
+  --color-gray-400: #929FA5;
+  --color-gray-500: #77878F;
+  --color-gray-600: #5F6C72;
+  --color-gray-700: #475156;
+  --color-gray-800: #303639;
+  --color-gray-900: #191C1F;
+
+  /* Primary */
+  --color-primary-50: #FFF3EB;
+  --color-primary-100: #FFE7D6;
+  --color-primary-200: #FFCEAD;
+  --color-primary-300: #FFB685;
+  --color-primary-400: #FF9D5C;
+  --color-primary-500: #FA8232;
+  --color-primary-600: #DE732D;
+  --color-primary-700: #99501F;
+  --color-primary-800: #663514;
+  --color-primary-900: #331B0A;
+
+  /* Secondary */
+  --color-secondary-50: #EAF6FE;
+  --color-secondary-100: #D5EDFD;
+  --color-secondary-200: #ABDBFA;
+  --color-secondary-300: #81C9F8;
+  --color-secondary-400: #57B7F5;
+  --color-secondary-500: #2DA5F3;
+  --color-secondary-600: #2484C2;
+  --color-secondary-700: #1B6392;
+  --color-secondary-800: #124261;
+  --color-secondary-900: #092131;
+
+  /* Success */
+  --color-success-50: #EAF7E9;
+  --color-success-100: #D5F0D3;
+  --color-success-200: #ABE0A7;
+  --color-success-300: #81D17C;
+  --color-success-400: #57C150;
+  --color-success-500: #2DB224;
+  --color-success-600: #248E1D;
+  --color-success-700: #1B6B16;
+  --color-success-800: #12470E;
+  --color-success-900: #092407;
+
+  /* Warning */
+  --color-warning-50: #FDFAE7;
+  --color-warning-100: #FBF4CE;
+  --color-warning-200: #F7E99E;
+  --color-warning-300: #F3DE6D;
+  --color-warning-400: #EFD33D;
+  --color-warning-500: #EBC80C;
+  --color-warning-600: #BCA00A;
+  --color-warning-700: #8D7807;
+  --color-warning-800: #5E5005;
+  --color-warning-900: #2F2802;
+
+  /* Danger */
+  --color-danger-50: #FDEEEE;
+  --color-danger-100: #FCDEDE;
+  --color-danger-200: #F8BCBC;
+  --color-danger-300: #F59B9B;
+  --color-danger-400: #F17979;
+  --color-danger-500: #EE5858;
+  --color-danger-600: #BE4646;
+  --color-danger-700: #8F3535;
+  --color-danger-800: #5F2323;
+  --color-danger-900: #301212;
+
+}
+
+body {
+  background-color: var(--color-danger-700);
+  color: var(--color-gray-00);
+  font-family: system-ui, sans-serif;
+}
