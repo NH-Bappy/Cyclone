@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img{
+  vertical-align: middle;
+}
+ul,
+li,
+ol{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+
+
 :root {
   /* Gray */
   --color-gray-00: #ffffff;
@@ -212,8 +232,8 @@
   @apply font-semibold text-[36px] font-[var(--font-public-sans)] leading-[44px];
 }
 
-body {
+/* body {
   background-color: var(--color-danger-700);
   color: var(--color-gray-00);
   font-family: var(--font-inter);
-}
+} */
