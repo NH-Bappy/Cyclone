@@ -1,85 +1,219 @@
 @import "tailwindcss";
 
-
 :root {
-
   /* Gray */
-  --color-gray-00: #FFFFFF;
-  --color-gray-50: #F2F4F5;
-  --color-gray-100: #E4E7E9;
-  --color-gray-200: #C9CFD2;
-  --color-gray-300: #ADB7BC;
-  --color-gray-400: #929FA5;
-  --color-gray-500: #77878F;
-  --color-gray-600: #5F6C72;
+  --color-gray-00: #ffffff;
+  --color-gray-50: #f2f4f5;
+  --color-gray-100: #e4e7e9;
+  --color-gray-200: #c9cfd2;
+  --color-gray-300: #adb7bc;
+  --color-gray-400: #929fa5;
+  --color-gray-500: #77878f;
+  --color-gray-600: #5f6c72;
   --color-gray-700: #475156;
   --color-gray-800: #303639;
-  --color-gray-900: #191C1F;
+  --color-gray-900: #191c1f;
 
   /* Primary */
-  --color-primary-50: #FFF3EB;
-  --color-primary-100: #FFE7D6;
-  --color-primary-200: #FFCEAD;
-  --color-primary-300: #FFB685;
-  --color-primary-400: #FF9D5C;
-  --color-primary-500: #FA8232;
-  --color-primary-600: #DE732D;
-  --color-primary-700: #99501F;
+  --color-primary-50: #fff3eb;
+  --color-primary-100: #ffe7d6;
+  --color-primary-200: #ffcead;
+  --color-primary-300: #ffb685;
+  --color-primary-400: #ff9d5c;
+  --color-primary-500: #fa8232;
+  --color-primary-600: #de732d;
+  --color-primary-700: #99501f;
   --color-primary-800: #663514;
-  --color-primary-900: #331B0A;
+  --color-primary-900: #331b0a;
 
   /* Secondary */
-  --color-secondary-50: #EAF6FE;
-  --color-secondary-100: #D5EDFD;
-  --color-secondary-200: #ABDBFA;
-  --color-secondary-300: #81C9F8;
-  --color-secondary-400: #57B7F5;
-  --color-secondary-500: #2DA5F3;
-  --color-secondary-600: #2484C2;
-  --color-secondary-700: #1B6392;
+  --color-secondary-50: #eaf6fe;
+  --color-secondary-100: #d5edfd;
+  --color-secondary-200: #abdbfa;
+  --color-secondary-300: #81c9f8;
+  --color-secondary-400: #57b7f5;
+  --color-secondary-500: #2da5f3;
+  --color-secondary-600: #2484c2;
+  --color-secondary-700: #1b6392;
   --color-secondary-800: #124261;
   --color-secondary-900: #092131;
 
   /* Success */
-  --color-success-50: #EAF7E9;
-  --color-success-100: #D5F0D3;
-  --color-success-200: #ABE0A7;
-  --color-success-300: #81D17C;
-  --color-success-400: #57C150;
-  --color-success-500: #2DB224;
-  --color-success-600: #248E1D;
-  --color-success-700: #1B6B16;
-  --color-success-800: #12470E;
+  --color-success-50: #eaf7e9;
+  --color-success-100: #d5f0d3;
+  --color-success-200: #abe0a7;
+  --color-success-300: #81d17c;
+  --color-success-400: #57c150;
+  --color-success-500: #2db224;
+  --color-success-600: #248e1d;
+  --color-success-700: #1b6b16;
+  --color-success-800: #12470e;
   --color-success-900: #092407;
 
   /* Warning */
-  --color-warning-50: #FDFAE7;
-  --color-warning-100: #FBF4CE;
-  --color-warning-200: #F7E99E;
-  --color-warning-300: #F3DE6D;
-  --color-warning-400: #EFD33D;
-  --color-warning-500: #EBC80C;
-  --color-warning-600: #BCA00A;
-  --color-warning-700: #8D7807;
-  --color-warning-800: #5E5005;
-  --color-warning-900: #2F2802;
+  --color-warning-50: #fdfae7;
+  --color-warning-100: #fbf4ce;
+  --color-warning-200: #f7e99e;
+  --color-warning-300: #f3de6d;
+  --color-warning-400: #efd33d;
+  --color-warning-500: #ebc80c;
+  --color-warning-600: #bca00a;
+  --color-warning-700: #8d7807;
+  --color-warning-800: #5e5005;
+  --color-warning-900: #2f2802;
 
   /* Danger */
-  --color-danger-50: #FDEEEE;
-  --color-danger-100: #FCDEDE;
-  --color-danger-200: #F8BCBC;
-  --color-danger-300: #F59B9B;
-  --color-danger-400: #F17979;
-  --color-danger-500: #EE5858;
-  --color-danger-600: #BE4646;
-  --color-danger-700: #8F3535;
-  --color-danger-800: #5F2323;
+  --color-danger-50: #fdeeee;
+  --color-danger-100: #fcdddd;
+  --color-danger-200: #f8bcbc;
+  --color-danger-300: #f59b9b;
+  --color-danger-400: #f17979;
+  --color-danger-500: #ee5858;
+  --color-danger-600: #be4646;
+  --color-danger-700: #8f3535;
+  --color-danger-800: #5f2323;
   --color-danger-900: #301212;
 
+  /* Fonts */
+  --font-inter: "Inter", sans-serif;
+  --font-public-sans: "Public Sans", sans-serif;
+}
+
+/* ---------------- Typography ---------------- */
+
+/* XL */
+.body_xl_400 {
+  @apply font-normal text-xl font-[var(--font-public-sans)] leading-7;
+}
+
+.body_xl_500 {
+  @apply font-medium text-xl font-[var(--font-public-sans)] leading-7;
+}
+
+.body_xl_600 {
+  @apply font-semibold text-xl font-[var(--font-public-sans)] leading-7;
+}
+
+/* LG */
+.body_lg_400 {
+  @apply font-normal text-lg font-[var(--font-public-sans)] leading-6;
+}
+
+.body_lg_500 {
+  @apply font-medium text-lg font-[var(--font-public-sans)] leading-6;
+}
+
+.body_lg_600 {
+  @apply font-semibold text-lg font-[var(--font-public-sans)] leading-6;
+}
+
+/* MD */
+.body_md_400 {
+  @apply font-normal text-base font-[var(--font-public-sans)] leading-6;
+}
+
+.body_md_500 {
+  @apply font-medium text-base font-[var(--font-public-sans)] leading-6;
+}
+
+.body_md_600 {
+  @apply font-semibold text-base font-[var(--font-public-sans)] leading-6;
+}
+
+/* SM */
+.body_sm_400 {
+  @apply font-normal text-sm font-[var(--font-public-sans)] leading-5;
+}
+
+.body_sm_500 {
+  @apply font-medium text-sm font-[var(--font-public-sans)] leading-5;
+}
+
+.body_sm_600 {
+  @apply font-semibold text-sm font-[var(--font-public-sans)] leading-5;
+}
+
+/* Tiny */
+.body_tiny_400 {
+  @apply font-normal text-xs font-[var(--font-public-sans)] leading-4;
+}
+
+.body_tiny_500 {
+  @apply font-medium text-xs font-[var(--font-public-sans)] leading-4;
+}
+
+.body_tiny_600 {
+  @apply font-semibold text-xs font-[var(--font-public-sans)] leading-4;
+}
+
+/* ---------------- Labels ---------------- */
+
+.label1 {
+  @apply font-medium text-lg font-[var(--font-public-sans)] leading-7;
+}
+
+.label2 {
+  @apply font-medium text-base font-[var(--font-public-sans)] leading-6;
+}
+
+.label3 {
+  @apply font-medium text-sm font-[var(--font-public-sans)] leading-5;
+}
+
+.label4 {
+  @apply font-medium text-xs font-[var(--font-public-sans)] leading-4;
+}
+
+.label5 {
+  @apply font-medium text-[11px] font-[var(--font-public-sans)] leading-4;
+}
+
+/* ---------------- Headings ---------------- */
+
+.heading1 {
+  @apply font-semibold text-3xl font-[var(--font-public-sans)] leading-10;
+}
+
+.heading2 {
+  @apply font-semibold text-2xl font-[var(--font-public-sans)] leading-8;
+}
+
+.heading3 {
+  @apply font-semibold text-xl font-[var(--font-public-sans)] leading-8;
+}
+
+.heading4 {
+  @apply font-semibold text-base font-[var(--font-public-sans)] leading-6 tracking-[0.012em];
+}
+
+.heading5 {
+  @apply font-semibold text-sm font-[var(--font-public-sans)] leading-6 tracking-[0.012em];
+}
+
+/* ---------------- Display ---------------- */
+
+.display1 {
+  @apply font-semibold text-[64px] font-[var(--font-public-sans)] leading-[72px];
+}
+
+.display2 {
+  @apply font-semibold text-[56px] font-[var(--font-public-sans)] leading-[64px];
+}
+
+.display3 {
+  @apply font-semibold text-[48px] font-[var(--font-public-sans)] leading-[56px];
+}
+
+.display4 {
+  @apply font-semibold text-[40px] font-[var(--font-public-sans)] leading-[48px];
+}
+
+.display5 {
+  @apply font-semibold text-[36px] font-[var(--font-public-sans)] leading-[44px];
 }
 
 body {
   background-color: var(--color-danger-700);
   color: var(--color-gray-00);
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-inter);
 }
