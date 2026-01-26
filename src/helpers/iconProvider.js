@@ -1,5 +1,9 @@
-import { FaTwitter, FaFacebook, FaPinterestP, FaReddit, FaYoutube } from "react-icons/fa";
-
+import { FaTwitter, FaFacebook, FaPinterestP, FaReddit, FaYoutube, FaInstagram, FaOpencart, FaRegHeart } from "react-icons/fa";
+import { PiUser } from "react-icons/pi";
+import { IoSearchOutline } from "react-icons/io5";
+import { CiLocationOn } from "react-icons/ci";
+import { IoIosGitCompare, IoIosHelpCircleOutline } from "react-icons/io";
+import { MdSupportAgent, MdOutlinePhoneInTalk } from "react-icons/md";
 
 
 export const icon = {
@@ -8,4 +12,14 @@ export const icon = {
     pinterestP: <FaPinterestP />,
     reddit: <FaReddit />,
     youtube: <FaYoutube />,
+    instagram: <FaInstagram />,
+    cart: <FaOpencart />,
+    heart: <FaRegHeart />,
+    user: <PiUser />,
+    search: <IoSearchOutline />,
+    location: <CiLocationOn />,
+    compare: <IoIosGitCompare />,
+    support: <MdSupportAgent />,
+    help: <IoIosHelpCircleOutline />,
+    phone: <MdOutlinePhoneInTalk />,
 }
