@@ -3,7 +3,7 @@ import { PiUser } from "react-icons/pi";
 import { IoSearchOutline } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
 import { IoIosGitCompare, IoIosHelpCircleOutline } from "react-icons/io";
-import { MdSupportAgent, MdOutlinePhoneInTalk } from "react-icons/md";
+import { MdSupportAgent, MdOutlinePhoneInTalk ,MdOutlineArrowRightAlt } from "react-icons/md";
 
 
 export const icon = {
@@ -22,4 +22,5 @@ export const icon = {
     support: <MdSupportAgent />,
     help: <IoIosHelpCircleOutline />,
     phone: <MdOutlinePhoneInTalk />,
+    rightArrow: <MdOutlineArrowRightAlt />,
 }
