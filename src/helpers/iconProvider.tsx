@@ -2,14 +2,14 @@ import { FaTwitter, FaFacebook, FaPinterestP, FaReddit, FaYoutube, FaInstagram, 
 import { PiUser } from "react-icons/pi";
 import { IoSearchOutline } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
-import { IoIosGitCompare, IoIosHelpCircleOutline } from "react-icons/io";
-import { MdSupportAgent, MdOutlinePhoneInTalk ,MdOutlineArrowRightAlt } from "react-icons/md";
+import { IoIosGitCompare, IoIosHelpCircleOutline, IoIosArrowDown } from "react-icons/io";
+import { MdSupportAgent, MdOutlinePhoneInTalk, MdOutlineArrowRightAlt} from "react-icons/md";
 
 
-export const icon = {
+export const icons = {
     twitter: <FaTwitter />,
     facebook: <FaFacebook />,
-    pinterestP: <FaPinterestP />,
+    pinterest: <FaPinterestP />,
     reddit: <FaReddit />,
     youtube: <FaYoutube />,
     instagram: <FaInstagram />,
@@ -23,4 +23,5 @@ export const icon = {
     help: <IoIosHelpCircleOutline />,
     phone: <MdOutlinePhoneInTalk />,
     rightArrow: <MdOutlineArrowRightAlt />,
+    downArrow: <IoIosArrowDown />,
 }

@@ -1,7 +1,7 @@
 import Container from '../../commonComponents/Container';
 import { assets } from '../../../helpers/assetsProvider';
 import Button from '../../commonComponents/Button';
-import { icon } from '../../../helpers/iconProvider';
+import { icons } from '../../../helpers/iconProvider';
 
 const Header = () => {
   return (
@@ -23,7 +23,7 @@ const Header = () => {
             <div className='flex items-center justify-end'>
               <Button className='px-6 rounded shadow-2xl cursor-pointer hover:bg-warning-600 transition-all flex items-center gap-2 bg-warning-500'>
                 <span className='text-gray-900 heading7'>Shop now</span>
-                <span className='text-gray-900 inline-block'>{icon.rightArrow}</span>
+                <span className='text-gray-900 inline-block'>{icons.rightArrow}</span>
               </Button>
             </div>
           </div>
