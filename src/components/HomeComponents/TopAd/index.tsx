@@ -2,6 +2,7 @@ import Container from '../../commonComponents/Container';
 import { assets } from '../../../helpers/assetsProvider';
 import Button from '../../commonComponents/Button';
 import { icons } from '../../../helpers/iconProvider';
+import React from 'react';
 
 const Header = () => {
   return (
@@ -33,4 +34,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default React.memo(Header);

@@ -1,4 +1,5 @@
 import type { PropsWithChildren, ButtonHTMLAttributes } from "react";
+import React from "react";
 
 type ButtonProps = PropsWithChildren<
   ButtonHTMLAttributes<HTMLButtonElement>
@@ -12,7 +13,7 @@ const Button = ({ children, className, ...rest }: ButtonProps) => {
   );
 };
 
-export default Button;
+export default React.memo(Button);
 
 // children → The content inside the button.
 

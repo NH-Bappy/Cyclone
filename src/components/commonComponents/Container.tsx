@@ -1,4 +1,4 @@
-import { type PropsWithChildren } from 'react'
+import React, { type PropsWithChildren } from 'react'
 
 // { children: React.ReactNode } == PropsWithChildren
 
@@ -8,7 +8,7 @@ const Container = ({children} : PropsWithChildren) => {
   )
 }
 
-export default Container
+export default React.memo(Container);
 
 // 1️⃣ What is children?
 

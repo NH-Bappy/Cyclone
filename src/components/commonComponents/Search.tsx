@@ -10,4 +10,4 @@ const Search: React.FC<props> = ({ children, className }) => {
 
 };
 
-export default Search;
+export default React.memo(Search);

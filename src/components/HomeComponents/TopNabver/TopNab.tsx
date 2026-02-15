@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Container from '../../commonComponents/Container'
 import { icons } from '../../../helpers/iconProvider'
 
@@ -42,4 +42,4 @@ const TopNab = () => {
     )
 }
 
-export default TopNab
+export default React.memo(TopNab);

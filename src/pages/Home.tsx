@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/HomeComponents/TopAd'
 import TopNab from '../components/HomeComponents/TopNabver/TopNab'
 import Menu from '../components/HomeComponents/Menu/Menu'
+import TopCategory from '../components/HomeComponents/Category/TopCategory'
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
     <Header/>
     <TopNab/>
     <Menu/>
+    <TopCategory/>
     </>
   )
 }
