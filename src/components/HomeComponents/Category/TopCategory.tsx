@@ -1,19 +1,31 @@
-import React from "react"
+import React, { useState } from "react"
 import Container from "../../commonComponents/Container"
+import { icons } from "../../../helpers/iconProvider"
 
 const TopCategory = () => {
+    const [categoryOpen , setCategoryOpen] = useState(false)
+
     return (
         <div>
             <Container>
-                <div className="py-3">
-                    <select name="Category" id="Category" className="body_sm_500 bg-gray-50 px-2 py-2 rounded outline-none cursor-pointer">
-                        <option value="category">All Category</option>
-                        <option value="Mobile">Mobile</option>
-                        <option value="Laptop">Laptop</option>
-                        <option value="Tablet">Tablet</option>
-                        <option value="Camera">Camera</option>
-                        <option value="Accessories">Accessories</option>
+                <div className="py-3 relative">
+                    <select 
+                    name="Category" 
+                    id="Category" 
+                    className="body_sm_500 bg-gray-50 pl-2 pr-8 py-2 rounded outline-none cursor-pointer appearance-none"
+                    onChange={() => setCategoryOpen(categoryOpen)}
+                    >
+                        <option className="body_sm_500 bg-gray-50" value="category">All Category</option>
+                        <option className="body_sm_500 bg-gray-50" value="Mobile">Mobile</option>
+                        <option className="body_sm_500 bg-gray-50" value="Laptop">Laptop</option>
+                        <option className="body_sm_500 bg-gray-50" value="Tablet">Tablet</option>
+                        <option className="body_sm_500 bg-gray-50" value="Camera">Camera</option>
+                        <option className="body_sm_500 bg-gray-50" value="Accessories">Accessories</option>
                     </select>
+                    <span 
+                    className="absolute top-1/2 -translate-1/2  left-[105px]">
+                        {categoryOpen ? icons.upArrow : icons.downArrow}
+                    </span>
                 </div>
             </Container>
         </div>
