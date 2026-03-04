@@ -4,7 +4,30 @@ import { icons } from "../../../helpers/iconProvider"
 
 const TopCategory = () => {
     const [categoryOpen , setCategoryOpen] = useState(false)
-    console.log(categoryOpen)
+
+    const item = [
+        {
+            id: 1,
+            name: "Track Order",
+            icon: icons.location,
+        },
+        {
+            id: 2,
+            name: "Compare",
+            icon: icons.compare,
+        },
+        {
+            id: 3,
+            name: "Customer Support",
+            icon: icons.support
+        },
+        {
+            id: 4,
+            name: "need help",
+            icon: icons.help,
+        },
+    ]
+
 
     return (
         <div>
@@ -30,6 +53,12 @@ const TopCategory = () => {
                             {categoryOpen ? icons.upArrow : icons.downArrow}
                         </span>
                     </div>
+                    {/* category for support */}
+                    <div className="" >
+                        
+                    </div>
+
+                    
                 </div>
             </Container>
         </div>
