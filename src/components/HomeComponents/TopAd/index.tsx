@@ -35,3 +35,8 @@ const Header = () => {
 }
 
 export default React.memo(Header);
+
+
+// React.memo() is a Higher Order Component(HOC) in React.
+
+// It is used to prevent unnecessary re - renders of functional components.

@@ -1,8 +1,8 @@
-import React from 'react'
 import Header from '../components/HomeComponents/TopAd'
 import TopNab from '../components/HomeComponents/TopNabver/TopNab'
 import Menu from '../components/HomeComponents/Menu/Menu'
 import TopCategory from '../components/HomeComponents/Category/TopCategory'
+import Banner from '../components/HomeComponents/Banner/Banner'
 
 const Home = () => {
   return (
@@ -11,6 +11,7 @@ const Home = () => {
     <TopNab/>
     <Menu/>
     <TopCategory/>
+    <Banner/>
     </>
   )
 }
