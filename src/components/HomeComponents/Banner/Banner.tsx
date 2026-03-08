@@ -4,7 +4,8 @@ import { assets } from '../../../helpers/assetsProvider'
 import { sliderImage } from "../../../content/index";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import "swiper/css/pagination";
+import { A11y, Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
 
 
 
@@ -21,12 +22,18 @@ const Banner = () => {
                     {/* slider */}
                     <div className="rounded h-[500px] overflow-hidden">
                         <Swiper
-                            className="h-full"
-                            modules={[Navigation, Pagination, Scrollbar, A11y]}
+                            className="h-full [&_.swiper-pagination-bullet]:bg-white"
+                            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                             spaceBetween={50}
                             slidesPerView={1}
-                            pagination={{ clickable: true }}
-                            autoplay={{ delay: 1000 }}
+                            pagination={{
+                                clickable: true,
+                                dynamicBullets: true,
+                            }}
+                            autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false,
+                            }}
                             loop={true}
                             scrollbar={{ draggable: true }}
                             onSwiper={(swiper) => console.log(swiper)}
