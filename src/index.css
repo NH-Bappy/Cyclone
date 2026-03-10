@@ -260,7 +260,7 @@ a{
 }
 
 .label3 {
-  @apply font-medium text-sm font-[var(--font-public-sans)] leading-5;
+  @apply font-medium text-lg font-[var(--font-public-sans)] leading-5;
 }
 
 .label4 {
