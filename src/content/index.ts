@@ -29,3 +29,36 @@ export const sliderImage = [
   },
 
 ];
+
+export const shopCategory = [
+  {
+    id : 1,
+    name: "Computer & Laptop",
+    img: assets.computer,
+  },
+  {
+    id : 2,
+    name: "SmartPhone",
+    img: assets.smartPhone,
+  },
+  {
+    id : 3,
+    name: "Headphones",
+    img: assets.BrandHeadphone,
+  },
+  {
+    id : 4,
+    name: "Accessories",
+    img: assets.accessories,
+  },
+  {
+    id : 5,
+    name: "Camera & Photo",
+    img: assets.camera,
+  },
+  {
+    id : 6,
+    name: "TV & Homes",
+    img: assets.tv,
+  },
+]
