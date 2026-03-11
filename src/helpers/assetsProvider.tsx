@@ -16,6 +16,7 @@ import BrandHeadphone from '../assets/homeAssets/Headphones category.png';
 import accessories from '../assets/homeAssets/Accessories.png';
 import camera from '../assets/homeAssets/Camera & Photo.png';
 import tv from '../assets/homeAssets/TV & Homes.png';
+import drones from '../assets/homeAssets/drones.webp';
 
 export const assets = {
     ad,
@@ -36,4 +37,5 @@ export const assets = {
     accessories,
     camera,
     tv,
+    drones,
 }

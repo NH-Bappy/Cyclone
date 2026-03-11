@@ -61,4 +61,9 @@ export const shopCategory = [
     name: "TV & Homes",
     img: assets.tv,
   },
+  {
+    id : 7,
+    name: "drones",
+    img: assets.drones,
+  },
 ]
