@@ -4,6 +4,7 @@ import Menu from '../components/HomeComponents/Menu/Menu'
 import TopCategory from '../components/HomeComponents/Category/TopCategory'
 import Banner from '../components/HomeComponents/Banner/Banner'
 import Support from '../components/HomeComponents/support/Support'
+import ShopCategory from '../components/HomeComponents/shopCategory/ShopCategory'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
     <TopCategory/>
     <Banner/>
     <Support/>
+    <ShopCategory/>
     </>
   )
 }

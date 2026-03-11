@@ -38,10 +38,7 @@ const Support = () => {
 
 
     return (
-
-
-
-        <div className='py-20'>
+        <div className='my-20 w-full'>
             <Container>
                 <div className="border border-gray-100 px-10 py-6 grid grid-cols-4 gap-x-5 rounded">
 

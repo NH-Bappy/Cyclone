@@ -10,6 +10,12 @@ import creditCard from '../assets/homeAssets/CreditCard.png';
 import headPhone from '../assets/homeAssets/Headphones.png';
 import packages from '../assets/homeAssets/Package.png';
 import trophy from '../assets/homeAssets/Trophy.png';
+import computer from '../assets/homeAssets/Computer & Laptop.png';
+import smartPhone from '../assets/homeAssets/SmartPhone.png';
+import BrandHeadphone from '../assets/homeAssets/Headphones category.png';
+import accessories from '../assets/homeAssets/Accessories.png';
+import camera from '../assets/homeAssets/Camera & Photo.png';
+import tv from '../assets/homeAssets/TV & Homes.png';
 
 export const assets = {
     ad,
@@ -24,4 +30,10 @@ export const assets = {
     headPhone,
     packages,
     trophy,
+    computer,
+    smartPhone,
+    BrandHeadphone,
+    accessories,
+    camera,
+    tv,
 }
