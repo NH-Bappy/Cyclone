@@ -17,6 +17,8 @@ import accessories from '../assets/homeAssets/Accessories.png';
 import camera from '../assets/homeAssets/Camera & Photo.png';
 import tv from '../assets/homeAssets/TV & Homes.png';
 import drones from '../assets/homeAssets/drones.webp';
+import ProductBanner from '../assets/homeAssets/ProductBanner.png'
+
 
 export const assets = {
     ad,
@@ -38,4 +40,5 @@ export const assets = {
     camera,
     tv,
     drones,
+    ProductBanner,
 }
