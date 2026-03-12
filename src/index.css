@@ -337,7 +337,30 @@ a{
   font-weight: bold;
 }
 
+.CustomStyle {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
+.CustomStyle:hover {
+  color: #f97316;
+}
+
+.CustomStyle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #f97316;
+  transition: width 0.3s ease;
+}
+
+.CustomStyle:hover::after {
+  width: 100%;
+}
 
 /* body {
   background-color: var(--color-danger-700);
