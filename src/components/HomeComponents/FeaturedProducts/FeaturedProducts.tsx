@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Container from '../../commonComponents/Container'
 import { assets } from '../../../helpers/assetsProvider'
+import { icons } from '../../../helpers/iconProvider'
+import { ArrowBigLeft } from 'lucide-react'
 
 const FeaturedProducts: React.FC = () => {
 
@@ -58,6 +60,10 @@ const FeaturedProducts: React.FC = () => {
                                         </li>
                                     ))}
                                 </ul>
+                                <p className='flex gap-x-3 items-center text-primary-500'>
+                                    Browse All Product
+                                <span className='text-2xl'>{icons.rightArrow}</span></p>
+
                             </div>
                         </div>
                         <div className="">low tir</div>
