@@ -46,9 +46,10 @@ const FeaturedProducts: React.FC = () => {
                         <img src={assets.ProductBanner} alt={"banner picture"} className='shadow-2xl w-full h-full object-cover' />
                     </div>
                     <div className="grid grid-rows-[0.5fr_4fr] rounded">
-                        <div className="grid grid-cols-2">
+                        
+                        <div className="flex items-start justify-between">
                             <h2 className='heading3 text-gray-900'>Featured Products</h2>
-                            <div className="">
+                            <div className="flex items-center gap-x-6">
 
                                 <ul className='flex items-center gap-x-5'>
                                     {productList.map((item) => (
@@ -60,9 +61,10 @@ const FeaturedProducts: React.FC = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <p className='flex gap-x-3 items-center text-primary-500'>
+                                <button className='flex gap-x-1 items-center text-primary-500 body_sm_400'>
                                     Browse All Product
-                                <span className='text-2xl'>{icons.rightArrow}</span></p>
+                                <span className='text-3xl'>{icons.rightArrow}</span>
+                                </button>
 
                             </div>
                         </div>
