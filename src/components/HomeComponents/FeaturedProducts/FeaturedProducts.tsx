@@ -47,6 +47,7 @@ const FeaturedProducts: React.FC = () => {
                     </div>
                     <div className="grid grid-rows-[0.5fr_4fr] rounded">
                         
+                        {/* row top */}
                         <div className="flex items-start justify-between">
                             <h2 className='heading3 text-gray-900'>Featured Products</h2>
                             <div className="flex items-center gap-x-6">
@@ -68,7 +69,18 @@ const FeaturedProducts: React.FC = () => {
 
                             </div>
                         </div>
+                        
+                        {/* row bottom */}
+
+
+
+
                         <div className="">low tir</div>
+
+
+
+
+
                     </div>
                 </div>
             </Container>
