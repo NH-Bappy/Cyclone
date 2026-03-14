@@ -46,7 +46,7 @@ const FeaturedProducts: React.FC = () => {
                     <div className="">
                         <img src={assets.ProductBanner} alt={"banner picture"} className='shadow-2xl w-full h-full object-cover' />
                     </div>
-                    <div className="grid grid-rows-[0.5fr_4fr] rounded">
+                    <div className="grid grid-rows-[0.3fr_4fr] rounded">
                         
                         {/* row top */}
                         <div className="flex items-start justify-between">
@@ -76,8 +76,10 @@ const FeaturedProducts: React.FC = () => {
 
 
 
-                        <div className="">
-                            <Product/>
+                        <div className="grid grid-cols-4 gap-4">
+                            {[...new Array(8)].map((_, index) => (
+                            <Product key={index}/>
+                            ))}
                         </div>
 
 

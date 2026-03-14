@@ -2,10 +2,15 @@ import React from 'react'
 import { assets } from '../../helpers/assetsProvider'
 import { icons } from '../../helpers/iconProvider'
 
-const Product: React.FC = () => {
+type featureProductProps = {
+  key: number
+}
+
+
+const Product = ({key}: featureProductProps) => {
 
   return (
-    <div className='p-3 border w-50 border-gray-500 relative'>
+    <div key={key} className='p-3 border shadow border-gray-100 rounded relative'>
       <div className="flex items-center justify-center">
         <img src={assets.A72} alt={"photo"} className='w-full h-full object-cover'/>
       </div>
@@ -13,15 +18,16 @@ const Product: React.FC = () => {
 
 
       <div className="pt-4">
-        <div className="flex gap-1">
+        <div className="flex items-center gap-1">
           {[1, 2, 3, 4 ,5].map(() => (
-            <span className='text-primary-500 py-1 text-sm'>{icons.star}</span>
+            <span className='text-primary-500 py-0.5 text-sm'>{icons.star}</span>
           ))}
+          <span className='text-gray-500 body_tiny_400'>(749)</span>
         </div>
 
         {/* product details */}
         <h2 className='body_xl_400 text-gray-900'>relam A72</h2>
-        <p className='body_sm_400 text-gray-900'>Wired Over-Ear Gaming Headphones with USB</p>
+        <p className='body_sm_400 text-gray-500 truncate'>Wired Over-Ear Gaming Headphones with USB</p>
 
         {/* price */}
 
