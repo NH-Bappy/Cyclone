@@ -18,6 +18,7 @@ import camera from '../assets/homeAssets/Camera & Photo.png';
 import tv from '../assets/homeAssets/TV & Homes.png';
 import drones from '../assets/homeAssets/drones.webp';
 import ProductBanner from '../assets/homeAssets/ProductBanner.png'
+import A72 from '../assets/homeAssets/A71.png';
 
 
 export const assets = {
@@ -41,4 +42,5 @@ export const assets = {
     tv,
     drones,
     ProductBanner,
+    A72,
 }

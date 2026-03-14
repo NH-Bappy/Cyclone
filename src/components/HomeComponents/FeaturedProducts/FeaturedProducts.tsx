@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import Container from '../../commonComponents/Container'
 import { assets } from '../../../helpers/assetsProvider'
 import { icons } from '../../../helpers/iconProvider'
-import { ArrowBigLeft } from 'lucide-react'
+
+import Product from '../../commonComponents/Product'
 
 const FeaturedProducts: React.FC = () => {
 
@@ -75,7 +76,9 @@ const FeaturedProducts: React.FC = () => {
 
 
 
-                        <div className="">low tir</div>
+                        <div className="">
+                            <Product/>
+                        </div>
 
 
 
