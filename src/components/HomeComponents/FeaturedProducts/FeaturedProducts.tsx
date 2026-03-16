@@ -78,7 +78,7 @@ const FeaturedProducts: React.FC = () => {
 
                         <div className="grid grid-cols-4 gap-4">
                             {[...new Array(8)].map((_, index) => (
-                            <Product key={index}/>
+                            <Product id={index}/>
                             ))}
                         </div>
 
