@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./pages/Home";
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import {
   useQuery,
   useMutation,
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
           </Routes>
         </BrowserRouter>
+        <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
 
     </>
