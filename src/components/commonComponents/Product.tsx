@@ -12,9 +12,32 @@ const Product = ({id}: featureProductProps) => {
 
 
 
-  const { data } = useGetApi()
+  const { data , isLoading , error } = useGetApi()
 
 
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-orange-500 mx-auto"></div>
+          <p className="mt-4 text-gray-600 text-lg font-medium">
+            Loading all product...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+
+
+
+
+
+
+
+
+
+  
 
   return (
 
