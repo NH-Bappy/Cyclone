@@ -28,6 +28,12 @@ const Product = ({id}: featureProductProps) => {
     );
   }
 
+  if(error){
+    return <h2>Error Loading Recipes</h2>
+  }
+
+
+  const product = data?.products?.length[0]
 
 
 
@@ -35,15 +41,12 @@ const Product = ({id}: featureProductProps) => {
 
 
 
-
-
-  
 
   return (
 
     <div key={id} className='p-3 border shadow border-gray-100 rounded relative'>
       <div className="flex items-center justify-center">
-        <img src={assets.A72} alt={"photo"} className='w-full h-full object-cover'/>
+        <img src={ product?.images || assets.A72} alt={"photo"} className='w-full h-full object-cover'/>
       </div>
       {/* rating */}
 
