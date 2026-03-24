@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import Container from '../../commonComponents/Container'
 import { assets } from '../../../helpers/assetsProvider'
 import { icons } from '../../../helpers/iconProvider'
-
+import { useGetApi } from '../../../api/api'
 import Product from '../../commonComponents/Product'
 
-const FeaturedProducts: React.FC = () => {
 
+const FeaturedProducts: React.FC = () => {
 
     const [productList] = useState([
         {
@@ -36,6 +36,18 @@ const FeaturedProducts: React.FC = () => {
         },
     ])
 
+    const { data , isLoading , error } = useGetApi();
+
+    if (isLoading) return <h2>Loading...</h2>;
+    if (error) return <h2>Error</h2>;
+
+    console.log(data)
+
+
+
+
+
+
 
 
 
@@ -49,7 +61,7 @@ const FeaturedProducts: React.FC = () => {
                     <div className="grid grid-rows-[0.3fr_4fr] rounded">
                         
                         {/* row top */}
-                        <div className="flex items-start justify-between">
+                        <div className="flex items-start pb-6 justify-between">
                             <h2 className='heading3 text-gray-900'>Featured Products</h2>
                             <div className="flex items-center gap-x-6">
 
@@ -77,8 +89,8 @@ const FeaturedProducts: React.FC = () => {
 
 
                         <div className="grid grid-cols-4 gap-4">
-                            {[...new Array(8)].map((_, index) => (
-                            <Product id={index}/>
+                            {data.products.slice(0 ,8).map(( product :any) => (
+                                <Product key={product.id} product={product}/>
                             ))}
                         </div>
 
