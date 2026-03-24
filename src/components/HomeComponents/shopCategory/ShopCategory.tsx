@@ -31,8 +31,8 @@ const ShopCategory = () => {
             scrollbar={{ draggable: true }}
             spaceBetween={30}
             slidesPerView={6}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log('slide change')}
+            // onSwiper={(swiper) => console.log(swiper)}
             // mobile break point
             breakpoints={{
               320: { slidesPerView: 2 },

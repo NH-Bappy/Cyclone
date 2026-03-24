@@ -36,8 +36,8 @@ const Banner = () => {
                             }}
                             loop={true}
                             scrollbar={{ draggable: true }}
-                            onSwiper={(swiper) => console.log(swiper)}
-                            onSlideChange={() => console.log('slide change')}
+                            // onSwiper={(swiper) => console.log(swiper)}
+                            // onSlideChange={() => console.log('slide change')}
                         >
                             {sliderImage.map((item) => (
                                 <SwiperSlide key={item.id} className="h-full">

@@ -2,46 +2,24 @@ import React, { useState } from 'react'
 import Container from '../../commonComponents/Container'
 import { assets } from '../../../helpers/assetsProvider'
 import { icons } from '../../../helpers/iconProvider'
-import { useGetApi } from '../../../api/api'
+import { useApiCategory, useGetApi } from '../../../api/api'
 import Product from '../../commonComponents/Product'
 
 
 const FeaturedProducts: React.FC = () => {
 
-    const [productList] = useState([
-        {
-            id: 1,
-            name: "All Product",
-            slug: "AllProduct"
-        },
-        {
-            id: 2,
-            name: "Smart Phone",
-            slug: "SmartPhone"
-        },
-        {
-            id: 3,
-            name: "Laptop",
-            slug: "Laptop"
-        },
-        {
-            id: 4,
-            name: "Headphone",
-            slug: "Headphone"
-        },
-        {
-            id: 5,
-            name: "TV",
-            slug: "TV"
-        },
-    ])
+    // category show
+    const { data: categoryData, isLoading: categoryLoading, error: categoryError } = useApiCategory();
 
     const { data , isLoading , error } = useGetApi();
 
-    if (isLoading) return <h2>Loading...</h2>;
-    if (error) return <h2>Error</h2>;
+    if (isLoading || categoryLoading) return <h2>Loading...</h2>;
+    if (error || categoryError) return <h2>Error</h2>;
 
-    console.log(data)
+    // category show
+    const displayCategories = categoryData?.slice(0, 5);
+
+    const filteredProducts = data?.products?.slice(0, 8);
 
 
 
@@ -66,12 +44,9 @@ const FeaturedProducts: React.FC = () => {
                             <div className="flex items-center gap-x-6">
 
                                 <ul className='flex items-center gap-x-5'>
-                                    {productList.map((item) => (
-                                        <li
-                                            key={item.id}
-                                            className='body_sm_400 text-gray-900 CustomStyle'
-                                        >
-                                            {item.name}
+                                    {displayCategories?.map((cat: any) => (
+                                        <li key={cat.id} className='body_sm_400 text-gray-900 CustomStyle'>
+                                            {cat.name}
                                         </li>
                                     ))}
                                 </ul>
@@ -89,8 +64,8 @@ const FeaturedProducts: React.FC = () => {
 
 
                         <div className="grid grid-cols-4 gap-4">
-                            {data.products.slice(0 ,8).map(( product :any) => (
-                                <Product key={product.id} product={product}/>
+                            {filteredProducts?.map((product: any) => (
+                                <Product key={product.id} product={product} />
                             ))}
                         </div>
 

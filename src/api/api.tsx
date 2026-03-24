@@ -11,4 +11,15 @@ export const useGetApi = () => {
             return data;
         }
     })
+};
+
+export const useApiCategory = () => {
+    return useQuery({
+        queryKey: ["get category api"],
+        queryFn: async () => {
+            const res = await fetch("https://dummyjson.com/products/categories");
+            const data = await res.json();
+            return data;
+        }
+    })
 }
