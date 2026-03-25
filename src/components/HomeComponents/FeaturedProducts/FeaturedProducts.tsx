@@ -7,7 +7,7 @@ import Product from '../../commonComponents/Product'
 
 
 const FeaturedProducts: React.FC = () => {
-    const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
 
     // category show
@@ -18,23 +18,16 @@ const FeaturedProducts: React.FC = () => {
     if (isLoading || categoryLoading) return <h2>Loading...</h2>;
     if (error || categoryError) return <h2>Error</h2>;
 
+
+
     // category show
     const displayCategories = categoryData?.slice(0, 5);
 
     const filteredProducts = data?.products
         ?.filter((product: any) =>
-            !selectedCategory || product.categoryId === selectedCategory
+            !selectedCategory || product.category === selectedCategory
         )
         .slice(0, 8);
-
-
-
-
-
-
-
-
-
 
     return (
         <div className='py-10'>
@@ -53,9 +46,9 @@ const FeaturedProducts: React.FC = () => {
                                 <ul className='flex items-center gap-x-5'>
                                     {displayCategories?.map((cat: any) => (
                                         <li
-                                            key={cat.id}
-                                            className={`body_sm_400 text-gray-900 CustomStyle cursor-pointer ${selectedCategory === cat.id ? 'font-bold text-primary-500' : ''}`}
-                                            onClick={() => setSelectedCategory(cat.id)}
+                                            key={cat.slug}
+                                            className={`body_sm_400 text-gray-900 CustomStyle cursor-pointer ${selectedCategory === cat.slug ? 'font-bold text-primary-500' : ''}`}
+                                            onClick={() => setSelectedCategory(cat.slug)}
                                         >
                                             {cat.name}
                                         </li>
@@ -76,13 +69,9 @@ const FeaturedProducts: React.FC = () => {
 
 
                         <div className="grid grid-cols-4 gap-4">
-                            {filteredProducts?.length === 0 ? (
-                                <p>No products found</p>
-                            ) : (
-                                filteredProducts?.map((product: any) => (
-                                    <Product key={product.id} product={product} />
-                                ))
-                            )}
+                            {filteredProducts?.map((product: any) => (
+                                <Product key={product.id} product={product} />
+                            ))}
                         </div>
 
 
