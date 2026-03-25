@@ -67,3 +67,4 @@ export const shopCategory = [
     img: assets.drones,
   },
 ]
+
