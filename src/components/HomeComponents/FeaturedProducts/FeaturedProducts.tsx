@@ -7,7 +7,7 @@ import Product from '../../commonComponents/Product'
 
 
 const FeaturedProducts: React.FC = () => {
-    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
 
 
     // category show
@@ -23,9 +23,9 @@ const FeaturedProducts: React.FC = () => {
 
     const filteredProducts = data?.products
         ?.filter((product: any) =>
-            !selectedCategory // if no category selected, show all
-            || product.category.toLowerCase() === selectedCategory.toLowerCase()
-        ).slice(0, 8);
+            !selectedCategory || product.categoryId === selectedCategory
+        )
+        .slice(0, 8);
 
 
 
@@ -54,9 +54,8 @@ const FeaturedProducts: React.FC = () => {
                                     {displayCategories?.map((cat: any) => (
                                         <li
                                             key={cat.id}
-                                            className={`body_sm_400 text-gray-900 CustomStyle cursor-pointer 
-                        ${selectedCategory?.toLowerCase() === cat.name.toLowerCase() ? 'font-bold text-primary-500' : ''}`}
-                                            onClick={() => setSelectedCategory(cat.name)}
+                                            className={`body_sm_400 text-gray-900 CustomStyle cursor-pointer ${selectedCategory === cat.id ? 'font-bold text-primary-500' : ''}`}
+                                            onClick={() => setSelectedCategory(cat.id)}
                                         >
                                             {cat.name}
                                         </li>
@@ -77,9 +76,13 @@ const FeaturedProducts: React.FC = () => {
 
 
                         <div className="grid grid-cols-4 gap-4">
-                            {filteredProducts?.map((product: any) => (
-                                <Product key={product.id} product={product} />
-                            ))}
+                            {filteredProducts?.length === 0 ? (
+                                <p>No products found</p>
+                            ) : (
+                                filteredProducts?.map((product: any) => (
+                                    <Product key={product.id} product={product} />
+                                ))
+                            )}
                         </div>
 
 
